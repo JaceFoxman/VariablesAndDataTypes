@@ -5,6 +5,7 @@
 'https://github.com/JaceFoxman/OperatorsExample.git
 
 Option Explicit On
+Option Strict Off
 
 Module VariablesAndDataTypes
 
@@ -13,6 +14,9 @@ Module VariablesAndDataTypes
         'camelCase/Declare Variavbles 
         Dim jellyBeans As Integer
         Dim laffyTaffy As Integer
+        Dim money As Decimal
+        Dim studentName As String
+
 
         Console.WriteLine(jellyBeans)
 
@@ -27,6 +31,15 @@ Module VariablesAndDataTypes
 
         laffyTaffy = 26
         Console.WriteLine(laffyTaffy)
+
+        money = 9.12837490812374D 'adding D tells the system you know
+        jellyBeans = CInt(1.56)
+        studentName = "7"
+
+        jellyBeans = CInt(studentName)
+
+        Console.WriteLine()
+
 
     End Sub
 
