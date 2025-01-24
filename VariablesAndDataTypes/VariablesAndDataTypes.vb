@@ -12,33 +12,72 @@ Module VariablesAndDataTypes
     Sub Main()
 
         'camelCase/Declare Variavbles 
-        Dim jellyBeans As Integer
-        Dim laffyTaffy As Integer
+
+        Dim jellybeans As Integer
+        Dim laffytaffy As Integer
         Dim money As Decimal
-        Dim studentName As String
+        Dim studentname As String
+        Dim userInput As String
+        Dim firstNumber As Integer
+        Dim secondNumber As Integer = 5
 
+        Console.WriteLine(jellybeans)
 
-        Console.WriteLine(jellyBeans)
+        jellybeans = 120
+        Console.WriteLine(jellybeans)
 
-        jellyBeans = 120
-        Console.WriteLine(jellyBeans)
+        jellybeans = jellybeans + 10 'can also write as jellyBeans += 10
+        Console.WriteLine(jellybeans)
 
-        jellyBeans = jellyBeans + 10 'can also write as jellyBeans += 10
-        Console.WriteLine(jellyBeans)
+        jellybeans += 10
+        Console.WriteLine(jellybeans)
 
-        jellyBeans += 10
-        Console.WriteLine(jellyBeans)
-
-        laffyTaffy = 26
-        Console.WriteLine(laffyTaffy)
+        laffytaffy = 26
+        Console.WriteLine(laffytaffy)
 
         money = 9.12837490812374D 'adding D tells the system you know
-        jellyBeans = CInt(1.56)
-        studentName = "7"
+        jellybeans = CInt(1.56)
+        studentname = "7"
 
-        jellyBeans = CInt(studentName)
+        jellybeans = CInt(studentname)
 
-        Console.WriteLine()
+        Console.WriteLine("Please enter a fruit")
+        userInput = Console.ReadLine()
+
+        Console.Write("The fruit you entered was: ")
+        Console.WriteLine(userInput)
+
+        Console.WriteLine($"You Entered:{userInput}!")
+
+
+
+
+        'Decisions
+        Console.Write($"choose 1st number:")
+        userInput = Console.ReadLine()
+
+        firstNumber = CInt(userInput)
+
+        Console.WriteLine("Please make a selection:" & vbNewLine _
+                          & "1.add" & vbNewLine _
+                          & "2.subtract" & vbNewLine _
+                          & "3.multiply")
+
+        userInput = Console.ReadLine()
+
+        Console.WriteLine($"you chose {userInput}")
+
+        If userInput = "1" Then
+            Console.WriteLine("let's add")
+            Console.WriteLine($"{firstNumber} + {secondNumber} = {firstNumber + secondNumber}")
+        ElseIf userInput = "2" Then
+            Console.WriteLine("let's subtract")
+        ElseIf userInput = "3" Then
+            Console.WriteLine("let's multiply")
+        Else
+            Console.WriteLine("Invalid Option")
+        End If
+
 
 
     End Sub
